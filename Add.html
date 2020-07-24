@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Insert Client Info.</title>
+</head>
+<style>
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
+</style>
+
+
+<body style="background-color:powderblue;">
+<form method="post" action="index.php">
+<input type="submit" value="Back" >
+</form>
+<center>
+<div data-role="page" id="page">
+	<div data-role="header" data-theme="b">
+    
+		<h3>Please fill in the blank</h3>
+	</div>
+</p></h3>
+<br />
+<div data-role="main" class="ui-content">
+<form method="post" action="Add-page.php">
+<div class="ui-field-contain">
+
+
+<table width="100" border="1" style="text-align:center; background-color:white;">
+<tr>
+<tr>
+ 	<td>Issue Date</td>
+    <td>Customer Name</td>
+    <td>Plate No.</td>
+    <td>Phone No.</td>
+    <td>Expired Date</td>
+    <td>Price</td>
+    <td>Status Payment</td>
+    <td>SMS</td>
+</tr>
+<tr>
+	<td><input type="date" name="Issue_Date"  /></td>
+    <td><input type="text" name="Customer_Name"  style="width: 250px;"/></td>
+    <td><input type="text" name="Plate_No" placeholder="AAA 1111" style="width: 110px;" onkeyup="myFunction()" id="Plate_No"/>
+    <td><input type="number" name="Phone_No" placeholder="60123456789" style="width: 110px;" /></td>
+    <td><input type="date" name="Expired_Date" /></td>
+    <td><input type="number" name="Price" style="width: 80px;"/></td>
+    <td><input type="text" name="Status_Payment" style="width: 100px;"/></td>
+    <td><input type="number" name="SMS" style="width: 30px;"/></td>
+    </tr></table></div>
+<br />
+  <input type="submit" data-inline="true" value="Submit"><br /><br /></form>
+</p>
+
+<script>
+function myFunction() {
+	var x = document.getElementById("Plate_No");
+	x.value = x.value.toUpperCase();
+}
+
+</script>
+
+
+</body>
+</html>
